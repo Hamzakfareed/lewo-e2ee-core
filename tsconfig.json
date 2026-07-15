@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "lib": ["ES2020", "DOM"],
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "types": ["jest", "node"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": ["src", "jest.setup.ts", "globals.d.ts"],
+  "//": "Tests are excluded from tsc (as in the main app) — the source is type-checked; the tests are validated by jest (npm test).",
+  "exclude": ["**/__tests__/**", "**/*.test.ts", "**/*.test.tsx"]
+}
